@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    padding: 0 40px;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+#nav {
+    background: deepskyblue;
+}
+
+#nav,
+#nav .right,
+#nav .left,
+.container {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+}
+
+#nav li {
+    margin: 0 15px;
+}
+
+#nav a:hover {
+    color: #cccccc;
+}
+
+#nav a {
+    color: #fff;
+}
+
+.container {
+    flex-flow: row wrap;
+}
+
+.large {
+    width: 100%;
+}
+
+.small {
+    margin: 30px 20px;
+    max-width: 47%;
+    max-height: 414px;
+    overflow: hidden;
+    position: relative;
+}
+
+/*鼠标停留在图片上时出现覆盖效果*/
+.mask {
+    position: absolute;
+    background: deepskyblue;
+    color: #fff;
+    opacity: 0;
+    top: 50%;
+    left: 0;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.small:hover .mask {
+    opacity: .7;
+}
+
+.footer p {
+    text-align: center;
+}
+
+@media screen and (max-width: 1368px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .small {
+        max-width: 100%;
+        margin: 0 0 10px 0;
+    }
+}
+
+@media screen and  (max-width: 560px) {
+    #nav,
+    #nav .right,
+    #nav .left {
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+
+    #nav li {
+        text-align: center;
+        margin-bottom: 5px;
+        padding: 3px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, .1);
+    }
+
+
+}
+
+
